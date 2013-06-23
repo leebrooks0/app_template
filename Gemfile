@@ -16,13 +16,13 @@ source 'http://rubygems.org'
   gem 'paranoia'
   gem 'sorcery', github: 'NoamB/sorcery' #
   gem 'cancan'
-  gem 'client_side_validations', github: 'bcardarella/client_side_validations', branch: '4-0-beta'
+  gem 'client_side_validations', github: 'bcardarella/client_side_validations', branch: '4-0-beta' #
   #gem 'client_side_validations-simple_form', github: 'saveritemedical/client_side_validations-simple_form'
-  gem 'client_side_validations-turbolinks'
-  gem 'carrierwave'
+  gem 'client_side_validations-turbolinks' #
+  gem 'carrierwave' #
   gem 'mini_magick'
   gem 'squeel', github: 'ernie/squeel'
-  gem 'ransack', github: 'ernie/ransack', branch: 'rails-4'
+  gem 'ransack', github: 'ernie/ransack', branch: 'rails-4' #
   gem 'will_paginate'
   gem 'bootstrap-will_paginate'
   gem 'bootstrap-datepicker-rails'

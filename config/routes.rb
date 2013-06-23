@@ -1,4 +1,28 @@
 AppTemplate::Application.routes.draw do
+  resources :toos
+
+  resources :tsgjkls
+
+  resources :hjfkskdfs
+
+  resources :fjksdjfs
+
+  resources :kjkdjsfs
+
+  resources :sts
+
+  resources :toots
+
+  resources :nits
+
+  resources :sherries
+
+  resources :lee1s
+
+  resources :x_yzs
+
+  resources :lees
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

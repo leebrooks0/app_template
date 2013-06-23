@@ -30,7 +30,7 @@ source 'http://rubygems.org'
   gem 'simple_enum'
   gem 'strip_attributes'
   gem 'paper_trail', github: 'airblade/paper_trail', branch: 'rails4'
-  gem 'draper'
+  gem 'draper' #
   gem 'aasm'
 
 group :test do

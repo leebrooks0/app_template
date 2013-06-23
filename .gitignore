@@ -17,3 +17,9 @@
 
 # Ignore all Rubymine files
 /.idea
+
+# Ignore Coverage results
+/coverage
+
+# Ignore CarrierWave uploads
+/public/uploads/*

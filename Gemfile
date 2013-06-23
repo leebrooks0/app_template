@@ -58,8 +58,8 @@ end
 group :development do
   gem 'letter-opener'
   gem 'launchy'
-  #gem 'awesome_print'
   gem 'pry-rails'
+  gem 'awesome_print'
   gem 'ffaker'
   gem 'annotate' #
   gem 'brakeman' #

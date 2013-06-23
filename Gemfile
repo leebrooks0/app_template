@@ -43,7 +43,7 @@ group :test, :development do
   gem 'minitest-rails'
   gem 'capybara' #
   gem 'capybara-email' #
-  #gem 'poltergeist'
+  gem 'poltergeist' #
   #gem 'factory_girl_rails'
   gem 'qunit-rails' #http://sinonjs.org/
   gem 'timecop'

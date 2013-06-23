@@ -67,6 +67,7 @@ group :development do
   gem 'guard'
   gem 'guard-rails'
   gem 'guard-sass'
+  gem 'guard-coffeescript'
   gem 'guard-minitest'
   gem 'guard-spork'
   gem 'guard-annotate'

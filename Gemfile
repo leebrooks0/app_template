@@ -61,7 +61,7 @@ group :development do
   #gem 'awesome_print'
   #gem 'pry'
   #gem 'pry-rails'
-  #gem 'ffaker'
+  gem 'ffaker'
   #gem 'meta_request'
   #gem 'annotate'
   #gem 'brakeman'

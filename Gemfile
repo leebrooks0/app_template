@@ -50,9 +50,7 @@ group :test, :development do
   #gem 'jasminerice', github: 'bradphelan/jasminerice' # Latest release still depends on haml.
   ##gem 'timecop'
   #gem 'simplecov'
-  ##gem 'cane'
-  ##gem 'morecane'
-  ##gem 'quiet_assets'
+  gem 'quiet_assets'
 end
 
 group :development do
@@ -73,5 +71,4 @@ group :development do
   gem 'guard-annotate'
   gem 'guard-livereload'
   gem 'rack-livereload'
-  #gem 'guard-rspec'
 end

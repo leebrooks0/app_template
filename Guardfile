@@ -2,7 +2,6 @@
 # More info at https://github.com/guard/guard#readme \
 
 ignore %r{^.idea}
-ignore %r{^.git}
 
 require 'guard/guard'
 
@@ -69,7 +68,7 @@ guard 'minitest' do
   # watch(%r|^app/models/(.*)\.rb|)      { |m| "test/unit/#{m[1]}_test.rb" }
 end
 
-guard 'rails' do
+guard 'rails',force_run: true do
   watch('Gemfile.lock')
   watch(%r{^(config|lib)/.*})
 end

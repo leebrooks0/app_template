@@ -63,14 +63,15 @@ group :development do
   gem 'ffaker'
   gem 'annotate' #
   gem 'brakeman' #
-  #gem 'rack-livereload'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
-  #gem 'guard'
+  gem 'guard'
+  gem 'guard-rails'
+  gem 'guard-minitest'
+  gem 'guard-spork'
+  gem 'guard-annotate'
+  gem 'guard-livereload'
+  gem 'rack-livereload'
   #gem 'guard-rspec'
-  #gem 'guard-jasmine'
-  #gem 'guard-livereload'
-  #gem 'rb-fsevent'
-  #gem 'growl'
 end

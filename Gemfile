@@ -56,8 +56,8 @@ group :test, :development do
 end
 
 group :development do
-  # Preview mail in the browser instead of sending.
   gem 'letter-opener'
+  gem 'launchy'
   #gem 'awesome_print'
   #gem 'pry'
   #gem 'pry-rails'
@@ -67,7 +67,7 @@ group :development do
   #gem 'brakeman'
   #gem 'rack-livereload'
   #gem 'foreman'
-  #gem 'launchy'
+
   #gem 'better_errors'
   #gem 'binding_of_caller'
   #gem 'guard'

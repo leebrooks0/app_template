@@ -44,7 +44,7 @@ group :test, :development do
   gem 'capybara' #
   gem 'capybara-email' #
   gem 'poltergeist' #
-  #gem 'factory_girl_rails'
+  gem 'factory_girl_rails' #
   gem 'qunit-rails' #http://sinonjs.org/
   gem 'timecop'
   gem 'simplecov' #

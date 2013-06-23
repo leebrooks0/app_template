@@ -62,12 +62,12 @@ group :development do
   #gem 'pry'
   #gem 'pry-rails'
   gem 'ffaker'
-  #gem 'meta_request'
   gem 'annotate' #
   gem 'brakeman' #
   #gem 'rack-livereload'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'meta_request'
   #gem 'guard'
   #gem 'guard-rspec'
   #gem 'guard-jasmine'

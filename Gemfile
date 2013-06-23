@@ -12,25 +12,24 @@ source 'https://rubygems.org'
   gem 'jquery-rails'
   gem 'turbolinks'
   gem 'simple_form', '~> 3.0.0.rc'  #
-#gem 'paranoia', github: 'radar/paranoia', branch: 'rails4'
-#gem 'sorcery'
-#gem 'cancan'
-#gem 'client_side_validations', github: 'bcardarella/client_side_validations', branch: '4-0-beta'
-#gem 'client_side_validations-simple_form'
-#gem 'carrierwave'
-#gem 'mini_magick'
-#gem 'ransack'
-#gem 'will_paginate'
-#gem 'bootstrap_will_paginate'
-#gem 'bootstrap-datepicker-rails'
-#gem 'attr_encrypted'
-#gem 'simple-enum'
-#gem 'strip_attributes'
-#gem 'audited-activerecord'
-#gem 'draper'
-#gem 'aasm'
-
-# gem 'debugger', group: [:development, :test]
+  gem 'paranoia'#
+  gem 'sorcery', github: 'NoamB/sorcery'
+  gem 'cancan' #
+  gem 'client_side_validations', github: 'bcardarella/client_side_validations', branch: '4-0-beta'
+  gem 'client_side_validations-simple_form' #
+  gem 'client_side_validations-turbolinks' #
+  gem 'carrierwave'
+  gem 'mini_magick'
+  gem 'ransack'
+  gem 'will_paginate'
+  gem 'bootstrap_will_paginate'
+  gem 'bootstrap-datepicker-rails'
+  gem 'attr_encrypted'
+  gem 'simple-enum'
+  gem 'strip_attributes'
+  gem 'audited-activerecord'
+  gem 'draper'
+  gem 'aasm'
 
 group :test do
   gem 'simplecov'
@@ -47,6 +46,7 @@ group :test, :development do
   gem 'timecop'
   gem 'simplecov' #
   gem 'quiet_assets'
+  gem 'debugger'
 end
 
 group :development do

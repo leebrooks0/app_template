@@ -35,7 +35,7 @@ source 'https://rubygems.org'
 # gem 'debugger', group: [:development, :test]
 
 group :test do
-  #gem 'simplecov'
+  gem 'simplecov'
   #gem 'poltergeist'
 end
 
@@ -49,7 +49,7 @@ group :test, :development do
   #gem 'fuubar'
   #gem 'jasminerice', github: 'bradphelan/jasminerice' # Latest release still depends on haml.
   ##gem 'timecop'
-  #gem 'simplecov'
+  gem 'simplecov' #
   gem 'quiet_assets'
 end
 
@@ -66,6 +66,7 @@ group :development do
   gem 'meta_request'
   gem 'guard'
   gem 'guard-rails'
+  gem 'guard-sass'
   gem 'guard-minitest'
   gem 'guard-spork'
   gem 'guard-annotate'

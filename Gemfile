@@ -40,15 +40,13 @@ group :test do
 end
 
 group :test, :development do
-  #gem 'minitest-rails'
-  #gem 'capybara'
-  ##gem 'capybara-email'
+  gem 'minitest-rails'
+  gem 'capybara' #
+  gem 'capybara-email' #
   #gem 'poltergeist'
   #gem 'factory_girl_rails'
-  #gem 'database_cleaner'
-  #gem 'fuubar'
-  #gem 'jasminerice', github: 'bradphelan/jasminerice' # Latest release still depends on haml.
-  ##gem 'timecop'
+  gem 'qunit-rails' #http://sinonjs.org/
+  gem 'timecop'
   gem 'simplecov' #
   gem 'quiet_assets'
 end

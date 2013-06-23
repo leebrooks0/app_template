@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 
   gem 'rails', '4.0.0.rc2'
   gem 'pg'
-  gem 'pg_search'
+  gem 'pg_search' #
   gem 'slim-rails'
   gem 'sass-rails',   '~> 4.0.0.rc2'
   gem 'coffee-rails', '~> 4.0.0'

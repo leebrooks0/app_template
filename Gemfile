@@ -46,7 +46,6 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'qunit-rails'
   gem 'timecop'
-  gem 'simplecov'
   gem 'quiet_assets'
   gem 'debugger'
 end

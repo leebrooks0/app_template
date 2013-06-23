@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-#ruby '2.0.0'
-#
-#gem 'rails', '4.0.0.rc2'
-#gem 'pg'
+  ruby '2.0.0'
+
+  gem 'rails', '4.0.0.rc2'
+  gem 'pg'
 #gem 'pg_search'
 #gem 'slim-rails'
 #gem 'sass-rails'
@@ -59,8 +59,7 @@ group :development do
   gem 'letter-opener'
   gem 'launchy'
   #gem 'awesome_print'
-  #gem 'pry'
-  #gem 'pry-rails'
+  gem 'pry-rails'
   gem 'ffaker'
   gem 'annotate' #
   gem 'brakeman' #

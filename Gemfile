@@ -63,13 +63,11 @@ group :development do
   #gem 'pry-rails'
   gem 'ffaker'
   #gem 'meta_request'
-  #gem 'annotate'
-  #gem 'brakeman'
+  gem 'annotate' #
+  gem 'brakeman' #
   #gem 'rack-livereload'
-  #gem 'foreman'
-
-  #gem 'better_errors'
-  #gem 'binding_of_caller'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   #gem 'guard'
   #gem 'guard-rspec'
   #gem 'guard-jasmine'

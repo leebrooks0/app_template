@@ -35,15 +35,14 @@ source 'http://rubygems.org'
 
 group :test do
   gem 'simplecov'
-  gem 'poltergeist'
+  gem 'poltergeist' #
 end
 
 group :test, :development do
   gem 'minitest-rails'
   gem 'minitest-reporters'
-  gem 'capybara'
-  gem 'capybara-email'
-  gem 'poltergeist'
+  gem 'capybara' #
+  gem 'capybara-email' #
   gem 'factory_girl_rails'
   gem 'qunit-rails'
   gem 'timecop'

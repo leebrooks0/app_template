@@ -13,7 +13,7 @@ source 'http://rubygems.org'
   gem 'jquery-rails'
   gem 'turbolinks'
   gem 'simple_form', '~> 3.0.0.rc'
-  gem 'paranoia'
+  gem 'paranoia' #
   gem 'sorcery', github: 'NoamB/sorcery'
   gem 'cancan'
   gem 'client_side_validations', github: 'bcardarella/client_side_validations', branch: '4-0-beta'

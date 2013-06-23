@@ -9,9 +9,9 @@ t.string :password_digest<%= attribute.inject_options %>
       t.<%= attribute.type %> :<%= attribute.name %><%= attribute.inject_options %>
 <% end -%>
 <% end -%>
-<% if options[:timestamps] %>
-      t.timestamps
-<% end -%>
+      t.datetime :created_at
+      t.datetime :updated_at
+      t.datetime :deleted_at
     end
 <% attributes_with_index.each do |attribute| -%>
     add_index :<%= table_name %>, :<%= attribute.index_name %><%= attribute.inject_index_options %>

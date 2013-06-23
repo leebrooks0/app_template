@@ -1,6 +1,7 @@
 <% module_namespacing do -%>
 Lee custom model
 class <%= class_name %> < <%= parent_class_name.classify %>
+  acts_as_paranoid
 <% attributes.select(&:reference?).each do |attribute| -%>
   belongs_to :<%= attribute.name %><%= ', polymorphic: true' if attribute.polymorphic? %>
 <% end -%>

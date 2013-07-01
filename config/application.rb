@@ -1,6 +1,11 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
+# Pick the frameworks you want:
+require 'active_record/railtie'
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'sprockets/railtie'
+# require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -24,5 +29,15 @@ module AppTemplate
     # Due to a change in Rails that prevents images from being compiled in vendor and lib,
     # you'll need to add the following line to your application.rb:
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    config.generators do |g|
+      g.helper false
+      g.javascripts false
+      g.stylesheets false
+      g.test_framework :mini_test,
+                       :spec => true,
+                       :fixture => false
+    end
+
   end
 end

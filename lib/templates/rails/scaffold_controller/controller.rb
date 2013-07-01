@@ -3,33 +3,34 @@ require_dependency "<%= namespaced_file_path %>/application_controller"
 
 <% end -%>
 <% module_namespacing do -%>
-Lee custom scaffold
 class <%= controller_class_name %>Controller < ApplicationController
   before_action :set_<%= singular_table_name %>, only: [:show, :edit, :update, :destroy]
 
-  load_and_authorize_resource
-
   # GET <%= route_url %>
   def index
-    @<%= plural_table_name %> = <%= orm_class.all(class_name) %>
+    @<%= plural_table_name %> = policy_scope(<%= singular_table_name %>)_
   end
 
   # GET <%= route_url %>/1
   def show
+    authorize @<%= singular_table_name %>
   end
 
   # GET <%= route_url %>/new
   def new
     @<%= singular_table_name %> = <%= orm_class.build(class_name) %>
+    authorize @<%= singular_table_name %>
   end
 
   # GET <%= route_url %>/1/edit
   def edit
+    authorize @<%= singular_table_name %>
   end
 
   # POST <%= route_url %>
   def create
     @<%= singular_table_name %> = <%= orm_class.build(class_name, "#{singular_table_name}_params") %>
+    authorize @<%= singular_table_name %>
 
     if @<%= orm_instance.save %>
       redirect_to @<%= singular_table_name %>, notice: <%= "'#{human_name} was successfully created.'" %>
@@ -38,8 +39,9 @@ class <%= controller_class_name %>Controller < ApplicationController
     end
   end
 
-  # PATCH <%= route_url %>/1
+  # PATCH/PUT <%= route_url %>/1
   def update
+    authorize @<%= singular_table_name %>
     if @<%= orm_instance.update("#{singular_table_name}_params") %>
       redirect_to @<%= singular_table_name %>, notice: <%= "'#{human_name} was successfully updated.'" %>
     else
@@ -49,6 +51,7 @@ class <%= controller_class_name %>Controller < ApplicationController
 
   # DELETE <%= route_url %>/1
   def destroy
+    authorize @<%= singular_table_name %>
     @<%= orm_instance.destroy %>
     redirect_to <%= index_helper %>_url, notice: <%= "'#{human_name} was successfully destroyed.'" %>
   end
@@ -61,7 +64,7 @@ class <%= controller_class_name %>Controller < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def <%= "#{singular_table_name}_params" %>
-      <%- if attributes_names.empty? -%>
+    <%- if attributes_names.empty? -%>
       params[<%= ":#{singular_table_name}" %>]
       <%- else -%>
       params.require(<%= ":#{singular_table_name}" %>).permit(<%= attributes_names.map { |name| ":#{name}" }.join(', ') %>)

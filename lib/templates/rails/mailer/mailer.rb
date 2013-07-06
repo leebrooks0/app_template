@@ -1,4 +1,3 @@
-Lee cusotm
 <% module_namespacing do -%>
 class <%= class_name %> < ActionMailer::Base
 default from: "from@example.com"

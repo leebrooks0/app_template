@@ -1,9 +1,4 @@
-<%- module_namespacing do -%>
-<%- if parent_class_name.present? -%>
-class <%= class_name %>Decorator < <%= parent_class_name %>
-    <%- else -%>
-class <%= class_name %>
-  <%- end -%>
+    class CustomerDecorator < Draper::Decorator
   delegate_all
 
   # Define presentation-specific methods here. Helpers are accessed through
@@ -16,4 +11,3 @@ class <%= class_name %>
   #   end
 
 end
-<% end -%>

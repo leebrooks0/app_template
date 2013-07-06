@@ -96,6 +96,10 @@ GEM
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
+    chosen-rails (0.10.0)
+      coffee-rails (>= 3.2)
+      railties (>= 3.0)
+      sass-rails (>= 3.2)
     coderay (1.0.9)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -341,6 +345,7 @@ DEPENDENCIES
   capybara
   capybara-email
   carrierwave
+  chosen-rails
   coffee-rails (~> 4.0.0)
   debugger
   draper

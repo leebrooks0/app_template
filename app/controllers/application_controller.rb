@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :require_login
-  after_action :verify_authorized, :except => :index
-  after_action :verify_policy_scoped, :only => :index
+  after_action :verify_authorized, except: :index
+  after_action :verify_policy_scoped, only: :index
   rescue_from Pundit::NotAuthorizedError, with: :not_authorized
 
   protected
@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   end
 
   def not_authorized
-    redirect_to :back || root_path, alert: 'You are not authorized to perform this action.'
+    flash[:error] = 'You are not authorized to perform this action.'
+    redirect_to request.headers['Referer'] || root_path
   end
 end

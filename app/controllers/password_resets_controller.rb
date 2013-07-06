@@ -1,7 +1,7 @@
 class PasswordResetsController < ApplicationController
 
   skip_before_action :require_login, only: [:create, :edit, :update]
-  skip_authorization_check
+  skip_after_action :verify_authorized, only: [:create, :edit, :update]
 
   def create
     @user = User.find_by_email(params[:email])

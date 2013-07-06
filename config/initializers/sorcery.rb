@@ -146,7 +146,7 @@ Rails.application.config.sorcery.configure do |config|
     # specify username attributes, for example: [:username, :email].
     # Default: `[:username]`
     #
-    # user.username_attribute_names =
+    user.username_attribute_names = [:email]
 
 
     # change *virtual* password attribute, the one which is used until an encrypted one is generated.
@@ -188,7 +188,7 @@ Rails.application.config.sorcery.configure do |config|
     # how many times to apply encryption to the password.
     # Default: `nil`
     #
-    # user.stretches =
+    user.stretches = 15
 
 
     # encryption key used to encrypt reversible encryptions such as AES256.
@@ -250,7 +250,7 @@ Rails.application.config.sorcery.configure do |config|
     # how many seconds before the activation code expires. nil for never expires.
     # Default: `nil`
     #
-    # user.activation_token_expiration_period =
+    user.activation_token_expiration_period = 3.days
 
 
     # your mailer class. Required.
@@ -307,7 +307,7 @@ Rails.application.config.sorcery.configure do |config|
     # mailer class. Needed.
     # Default: `nil`
     #
-    # user.reset_password_mailer =
+    user.reset_password_mailer = UserMailer
 
 
     # reset password email method on your mailer class.
@@ -327,7 +327,7 @@ Rails.application.config.sorcery.configure do |config|
     # how many seconds before the reset request expires. nil for never expires.
     # Default: `nil`
     #
-    # user.reset_password_expiration_period =
+    user.reset_password_expiration_period = 1.day
 
 
     # hammering protection, how long to wait before allowing another email to be sent.
@@ -352,13 +352,13 @@ Rails.application.config.sorcery.configure do |config|
     # How many failed logins allowed.
     # Default: `50`
     #
-    # user.consecutive_login_retries_amount_limit =
+    user.consecutive_login_retries_amount_limit = 7
 
 
     # How long the user should be banned. in seconds. 0 for permanent.
     # Default: `60 * 60`
     #
-    # user.login_lock_time_period =
+    user.login_lock_time_period = 5.minutes
 
     # Unlock token attribute name
     # Default: `:unlock_token`
@@ -433,5 +433,5 @@ Rails.application.config.sorcery.configure do |config|
 
   # This line must come after the 'user config' block.
   # Define which model authenticates with sorcery.
-  config.user_class = "User"
+  config.user_class = 'User'
 end

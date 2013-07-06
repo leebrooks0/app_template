@@ -3,25 +3,6 @@
 
 ignore %r{^.idea}
 
-require 'guard/guard'
-
-module ::Guard
-  class Ruby < Guard
-
-    def run_all
-      true
-    end
-
-    def run_on_change(paths)
-      `ruby -wc #{paths}`
-    end
-  end
-end
-
-guard 'ruby' do
-  watch( %r{/.*\.rb} )
-end
-
 guard 'annotate', notify: false, routes: true, tests: true, show_indexes: true do
   watch( 'db/schema.rb' )
 
@@ -75,14 +56,3 @@ end
 
 
 guard 'sass', :input => 'sass', :noop => true, :hide_success => true
-
-guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' }, :rspec_env => { 'RAILS_ENV' => 'test' } do
-  watch('config/application.rb')
-  watch('config/environment.rb')
-  watch('config/environments/test.rb')
-  watch(%r{^config/initializers/.+\.rb$})
-  watch('Gemfile.lock')
-  watch('spec/spec_helper.rb') { :rspec }
-  watch('test/test_helper.rb') { :test_unit }
-  watch(%r{features/support/}) { :cucumber }
-end

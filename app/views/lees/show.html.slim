@@ -1,0 +1,13 @@
+.page-header
+    h1 Lee
+
+dl
+    dt Name
+    dd= @lee.name
+
+    - if policy(@lee).update?
+        = link_to 'Edit', edit_lee_path(@lee), class: 'btn'
+    = link_to 'Back', lees_path, class: 'btn'
+
+    - if policy(@lee).destroy?
+        = link_to'Destroy', lee_path(@lee), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger'

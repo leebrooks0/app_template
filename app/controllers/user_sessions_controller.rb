@@ -1,9 +1,9 @@
 class UserSessionsController < ApplicationController
-
   skip_before_action :require_login, only: [:new, :create]
+  skip_after_action :verify_authorized, only: [:new, :create, :destroy]
 
   def new
-    @user = Use.new
+    @user_session = UserSession.new
   end
 
   def create

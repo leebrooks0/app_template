@@ -1,0 +1,9 @@
+= simple_form_for(@lee, html: {class: 'form-horizontal' }) do |f|
+    = f.error_notification
+
+    .form-inputs
+        = f.input :name, autofocus: true
+
+    .form-actions
+        = f.button :submit, class: 'btn btn-primary'
+        = link_to 'Back', lees_path, class: 'btn' %>

@@ -1,0 +1,21 @@
+nav.top-bar
+    ul.title-area
+        li.name
+            h1
+                a href='#' CassandraTest
+        li.toggle-topbar.menu-icon
+            a href='#'
+                span Menu
+    section.top-bar-section
+        ul.right
+            - models = Dir.foreach("#{Rails.root}/app/models") do |model|
+                li.divider
+                li
+                    a href='' = model.to_s.gsub('_', ' ').capitalize.chomp('.rb')
+                li.divider
+
+
+
+
+
+

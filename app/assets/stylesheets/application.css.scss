@@ -8,9 +8,36 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require bootstrap-datepicker
  *= require_self
+ *= require foundation_and_overrides
+ *= require responsive-tables
  *= require_tree .
  */
 
-@import "bootstrap";
+@import 'foundation-icons';
+
+// Give Foundation Icons a bit of breathing room
+i
+{
+  padding-right: 5px;
+  font-size: 20px;
+}
+
+// Set show buttons to green
+.show
+{
+  background: #78cd51 !important;
+}
+
+
+// Set delete buttons to red
+.delete
+{
+  background: #ff5454 !important;
+}
+
+// Space out the actions a little
+div.actions .button
+{
+  margin-right: 3px;
+}

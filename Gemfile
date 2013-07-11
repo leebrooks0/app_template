@@ -22,6 +22,7 @@ source 'http://rubygems.org'
   gem 'carrierwave'
   gem 'mini_magick'
   gem 'squeel', github: 'ernie/squeel'
+  gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
   gem 'will_paginate'  #
   gem 'strip_attributes'
   gem 'paper_trail', github: 'airblade/paper_trail', branch: 'rails4'
@@ -46,7 +47,9 @@ group :test, :development do
 end
 
 group :development do
-  gem 'letter_opener'  # Switch to Mailcatcher
+  # http://mailcatcher.me/
+  # Please don't put mailcatcher into your Gemfile. It will conflict with your applications gems at some point.
+  gem 'mailcatcher'
   gem 'launchy'
   gem 'pry-rails'
   gem 'awesome_print'

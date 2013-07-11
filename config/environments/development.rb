@@ -15,8 +15,12 @@ AppTemplate::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  # Preview email in the browser instead of opening it.
-  config.action_mailer.delivery_method = :letter_opener
+  # http://mailcatcher.me/
+  # Catches any message sent to it to display in a web interface at localhost:1080.
+  # Run mailcatcher from the terminal to start the daemon
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' } # Needed for Devise
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => 'localhost', :port => 1025 }
   config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.

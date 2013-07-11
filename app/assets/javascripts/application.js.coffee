@@ -16,4 +16,6 @@
 #= require foundation
 #= require responsive-tables
 #= require chosen-jquery
+#= require dataTables/jquery.dataTables
+#= require jquery.pjax
 #= require_tree .

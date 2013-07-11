@@ -30,9 +30,9 @@ AppTemplate::Application.routes.draw do
 
   resources :user_sessions, only: [:new, :create, :destroy]
 
-  get 'sign_up' => 'registrations#new'
+  get 'sign_up' => 'registrations#new', as: :sign_up
   post 'sign_up' => 'registrations#create'
-  get 'activate/:token' => 'registrations#activate'
+  get 'activate/:token' => 'registrations#activate', as: :activate
 
   get 'forgotten_password' => 'password_resets#new'
   post 'forgotten_password' => 'password_resets#create'
